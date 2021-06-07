@@ -1,4 +1,4 @@
-#include "Main_Func.h"
+#include "Main_Func.h"//asd
 #include "Incld.h"
 #include "util.h"
 #include "Maze_Func.h"
@@ -7,15 +7,15 @@
 
 void main() {
     check = 1;
-    playsound();               // ³ë·¡ Àç»ý
-    SetConsoleTitle(TEXT("MazeRunner"));     // Á¦¸ñ ¼³Á¤
-    setMenuSize();             // ¸Þ´º »çÀÌÁî Á¶Àý
-    hidingCursor();            // Ä¿¼­ ¼û±â±â
-    Animation(false);          // ¾Ö´Ï¸ÞÀÌ¼Ç ½ÇÇà(true, false)·Î ±¸ºÐ
+    playsound();               // ë…¸ëž˜ ìž¬ìƒ
+    SetConsoleTitle(TEXT("MazeRunner"));     // ì œëª© ì„¤ì •
+    setMenuSize();             // ë©”ë‰´ ì‚¬ì´ì¦ˆ ì¡°ì ˆ
+    hidingCursor();            // ì»¤ì„œ ìˆ¨ê¸°ê¸°
+    Animation(false);          // ì• ë‹ˆë©”ì´ì…˜ ì‹¤í–‰(true, false)ë¡œ êµ¬ë¶„
     Menu();
 }
 
-void Menukeyget() { //¸Þ´º Å°ÀÔ·Â
+void Menukeyget() { //ë©”ë‰´ í‚¤ìž…ë ¥
     int x = 18, y = 23;
     char c;
 
@@ -25,16 +25,16 @@ void Menukeyget() { //¸Þ´º Å°ÀÔ·Â
             case UP: {
                 if (x > 18) {               
                     selection(x, y, "  ");
-                    selection(x -= 2, y, "¢º");                   
+                    selection(x -= 2, y, "â–¶");                   
                 } break;
             }
             case DOWN: {
                 if (x < 26) {
                     selection(x, y, "  ");
-                    selection(x += 2, y, "¢º");
+                    selection(x += 2, y, "â–¶");
                 } break;
             }
-            case ENTER: //¿£ÅÍ ÀÔ·Â½Ã cls·Î ÄÜ¼Ö ÃÊ±âÈ­
+            case ENTER: //ì—”í„° ìž…ë ¥ì‹œ clsë¡œ ì½˜ì†” ì´ˆê¸°í™”
                 keyvalue = (x - 18) / 2;
                 break;
             }
@@ -49,24 +49,24 @@ void Menukeyget() { //¸Þ´º Å°ÀÔ·Â
         system("cls");
         Ranking();
     }
-    else if (keyvalue == 2) { // Setting ½ÇÇà
+    else if (keyvalue == 2) { // Setting ì‹¤í–‰
         system("cls");
         Setting();
     }
-    else if (keyvalue == 3) { // Help ½ÇÇà
+    else if (keyvalue == 3) { // Help ì‹¤í–‰
         system("cls");
         Help();
     } 
     else if (keyvalue == 4) {
-        printf("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù.");
+        printf("ê²Œìž„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
         exit(1);
     }
 }
 
 void Setting() {
     int x = 18, y = 2;
-    selection(x, y - 1, "¢º  »ç¿îµå ¼³Á¤");
-    selection(x + 2, y + 1, "³ª°¡±â");
+    selection(x, y - 1, "â–¶  ì‚¬ìš´ë“œ ì„¤ì •");
+    selection(x + 2, y + 1, "ë‚˜ê°€ê¸°");
 
     while (1) {
         char c = getch();
@@ -74,12 +74,12 @@ void Setting() {
         case UP:
             if (x > 18) {
                 selection(x, y - 1, "  ");
-                selection(x -= 2, y - 1, "¢º");
+                selection(x -= 2, y - 1, "â–¶");
             } break;
         case DOWN:
             if (x < 20) {
                 selection(x, y - 1, "  ");
-                selection(x += 2, y - 1, "¢º");
+                selection(x += 2, y - 1, "â–¶");
             } break;
         case ENTER:
             keyvalue = (x - 18) / 2;
@@ -91,20 +91,20 @@ void Setting() {
 }
 void Ranking() {
     int x = 18, y = 4;
-    selection(x, y - 1, "¢º  ·©Å· º¸±â");
-    selection(x + 2, y + 1, "³ª°¡±â");
+    selection(x, y - 1, "â–¶  ëž­í‚¹ ë³´ê¸°");
+    selection(x + 2, y + 1, "ë‚˜ê°€ê¸°");
     while (1) {
         char c = getch();
         switch (c) {
             case UP:
                 if (x > 18) {
                     selection(x, y - 1, "  ");
-                    selection(x -= 2, y - 1, "¢º");
+                    selection(x -= 2, y - 1, "â–¶");
                 } break;
             case DOWN:
                 if (x < 20) {        
                     selection(x, y - 1, "  ");
-                    selection(x += 2, y - 1, "¢º");
+                    selection(x += 2, y - 1, "â–¶");
                 } break;
             case ENTER:
                 keyvalue = (x - 18) / 2;
@@ -118,14 +118,14 @@ void Rankingexcute() {
     int x = 10, y = 2;
     if (keyvalue == 0) {
         system("cls");
-        printf("¾ÆÀÌµð          Å¬¸®¾î ½Ã°£          ³¯Â¥          ¼øÀ§\n");
+        printf("ì•„ì´ë””          í´ë¦¬ì–´ ì‹œê°„          ë‚ ì§œ          ìˆœìœ„\n");
         printf("abc             20:30:40             2021-05-18      1 \n");
         printf("def             30:10:17             2021-05-08      2 \n");
         printf("ghi             42:30:55             2021-05-01      3 \n");
         printf("jkl             55:30:44             2021-05-17      4 \n");
 
-        selection(x, y - 1, "¢º  ³ª°¡±â");
-        selection(x + 2, y + 1, "¸Þ´º·Î ³ª°¡±â");
+        selection(x, y - 1, "â–¶  ë‚˜ê°€ê¸°");
+        selection(x + 2, y + 1, "ë©”ë‰´ë¡œ ë‚˜ê°€ê¸°");
 
         char c;
         do {
@@ -134,12 +134,12 @@ void Rankingexcute() {
                 case UP:
                     if (x > 10) {
                         selection(x, y - 1, "  ");
-                        selection(x -= 2, y - 1, "¢º");
+                        selection(x -= 2, y - 1, "â–¶");
                     } break;
                 case DOWN:
                     if (x < 12) {
                         selection(x, y - 1, "  ");
-                        selection(x += 2, y - 1, "¢º");
+                        selection(x += 2, y - 1, "â–¶");
                     } break;
                 case ENTER:
                     keyvalue = (x - 10) / 2;
@@ -199,12 +199,12 @@ void Settingexcute() {
 }
 
 void Help() {
-    int x = 4, y = 3;     // ±âÁØ ÁÂÇ¥
-    for (i = 0; i < 9; i++) selection(i + 2, 5, key_help[i]);       // Á¶ÀÛ¹ý ¼³¸íÃ¢
-    for (i = 0; i < 9; i++) selection(i + 2, 30, rule_help[i]);       // ±ÔÄ¢ ¼³¸íÃ¢
-    for (i = 0; i < 5; i++) selection(i + 12, 5, item_help[i]);     // ¾ÆÀÌÅÛ ¼³¸íÃ¢
-    for (i = 0; i < 5; i++) selection(i + 12, 30, maker_help[i]);     // Á¦ÀÛÁø ¼³¸íÃ¢
-    selection(37, 25, "¢º ³ª°¡±â");
+    int x = 4, y = 3;     // ê¸°ì¤€ ì¢Œí‘œ
+    for (i = 0; i < 9; i++) selection(i + 2, 5, key_help[i]);       // ì¡°ìž‘ë²• ì„¤ëª…ì°½
+    for (i = 0; i < 9; i++) selection(i + 2, 30, rule_help[i]);       // ê·œì¹™ ì„¤ëª…ì°½
+    for (i = 0; i < 5; i++) selection(i + 12, 5, item_help[i]);     // ì•„ì´í…œ ì„¤ëª…ì°½
+    for (i = 0; i < 5; i++) selection(i + 12, 30, maker_help[i]);     // ì œìž‘ì§„ ì„¤ëª…ì°½
+    selection(37, 25, "â–¶ ë‚˜ê°€ê¸°");
 
     char c;
     do {
@@ -219,12 +219,12 @@ void Help() {
 }
 
 
-void Menu() {// ¸Þ´º È­¸é
+void Menu() {// ë©”ë‰´ í™”ë©´
     int x = 18, y = 25;
 
     Animation(false);
 
-    selection(x, y - 2, "¢º");
+    selection(x, y - 2, "â–¶");
 
     selection(x, y, "Game Start");
     selection(x + 2, y, "Ranking");
@@ -235,52 +235,52 @@ void Menu() {// ¸Þ´º È­¸é
     Menukeyget();
 }
 
-void Animation(bool sleepTF) {      //sleepTF·Î ¾Ö´Ï¸ÞÀÌ¼ÇÀ» ÀÛµ¿ÇÒÁö ¾Æ´Ï¸é ±×³É Ãâ·Â¸¸ÇÒÁö °áÁ¤
+void Animation(bool sleepTF) {      //sleepTFë¡œ ì• ë‹ˆë©”ì´ì…˜ì„ ìž‘ë™í• ì§€ ì•„ë‹ˆë©´ ê·¸ëƒ¥ ì¶œë ¥ë§Œí• ì§€ ê²°ì •
     int cnt = 0;
     int num[] = { 7, 19, 31, 43 };
 
     gotoxy(2, 4);
     for (i = 0; i < 52; i++) {
-        printf("¡à");
+        printf("â–¡");
         if (sleepTF) Sleep(10);
     }
     for (i = 3; i < 17; i++) {
-        selection(i, 55, "¡à");
+        selection(i, 55, "â–¡");
         if (sleepTF) Sleep(10);
     }
     for (i = 54; i > 3; i--) {
-        selection(16, i, "¡à");
+        selection(16, i, "â–¡");
         if (sleepTF) Sleep(10);
     }
     for (i = 15; i >= 3; i--) {
-        selection(i, 4, "¡à");
+        selection(i, 4, "â–¡");
         if (sleepTF) Sleep(10);
     }
 
-    for (i = 0; i < 44; i++) {              //MAZE ¹®ÀÚ¸ð¾çÀ» µý ¹è¿­
-        selection((i % 11) + 4, num[cnt], MAZE_ch[i]);  //ÇÑ ¹®ÀÚ¾¿ ²÷¾î¼­ ÀÚ¸® ¿Å±â±â  //ÇÑÁÙ¾¿ Ãâ·Â
+    for (i = 0; i < 44; i++) {              //MAZE ë¬¸ìžëª¨ì–‘ì„ ë”´ ë°°ì—´
+        selection((i % 11) + 4, num[cnt], MAZE_ch[i]);  //í•œ ë¬¸ìžì”© ëŠì–´ì„œ ìžë¦¬ ì˜®ê¸°ê¸°  //í•œì¤„ì”© ì¶œë ¥
         if (sleepTF) Sleep(50);
         if ((i + 1) % 11 == 0) cnt++;       
     }
 }
 void serverselect() {
     int x = 18, y = 4;
-    selection(x, y - 1, "¢º  1ÀÎ¿ë °ÔÀÓ");
-    selection(x + 2, y + 1, "2ÀÎ¿ë °ÔÀÓ");
-    selection(x + 4, y + 1, "³ª°¡±â");
+    selection(x, y - 1, "â–¶  1ì¸ìš© ê²Œìž„");
+    selection(x + 2, y + 1, "2ì¸ìš© ê²Œìž„");
+    selection(x + 4, y + 1, "ë‚˜ê°€ê¸°");
     while (1) {
         char c = getch();
         switch (c) {
         case UP: {
             if (x > 18) {
                 selection(x, y - 1, "  ");
-                selection(x -= 2, y - 1, "¢º");
+                selection(x -= 2, y - 1, "â–¶");
             } break;
         }
         case DOWN: {
             if (x < 22) {
                 selection(x, y - 1, "  ");
-                selection(x += 2, y - 1, "¢º");
+                selection(x += 2, y - 1, "â–¶");
             } break;
         }
         case ENTER:
@@ -299,9 +299,9 @@ void serverexcute() {
     }
     else if (keyvalue == 1) {
         system("cls");
-        selection(x, y - 1, "¢º  ¼­¹ö(È£½ºÆ® Player 1)");
-        selection(x + 2, y + 1, "Å¬¶óÀÌ¾ðÆ®(Player 2)");
-        selection(x + 4, y + 1, "³ª°¡±â");
+        selection(x, y - 1, "â–¶  ì„œë²„(í˜¸ìŠ¤íŠ¸ Player 1)");
+        selection(x + 2, y + 1, "í´ë¼ì´ì–¸íŠ¸(Player 2)");
+        selection(x + 4, y + 1, "ë‚˜ê°€ê¸°");
 
         char c;
         do {
@@ -310,13 +310,13 @@ void serverexcute() {
             case UP: {
                 if (x > 10) {
                     selection(x, y - 1, "  ");
-                    selection(x -= 2, y - 1, "¢º");
+                    selection(x -= 2, y - 1, "â–¶");
                 } break;
             }
             case DOWN: {
                 if (x < 14) {
                     selection(x, y - 1, "  ");
-                    selection(x += 2, y - 1, "¢º");
+                    selection(x += 2, y - 1, "â–¶");
                 } break;
             }
             case ENTER:
@@ -346,73 +346,73 @@ void serverexcute() {
 
 void server() {
     system("cls");
-    SOCKET      s, cs;            // ¼­¹ö¿Í Å¬¶óÀÌ¾ðÆ®ÀÇ ¼ÒÄÏ ÇÚµé ±¸Á¶Ã¼
-    WSADATA      wsaData;         // À©¼Ó Á¤º¸¸¦ ´ãÀ» ±¸Á¶Ã¼ 
-    SOCKADDR_IN sin, cli_addr;      // ¼­¹ö¿Í Å¬¶óÀÌ¾ðÆ®ÀÇ ¼ÒÄÏ ÁÖ¼ÒÁ¤º¸¸¦ ´ãÀ» ±¸Á¶Ã¼
+    SOCKET      s, cs;            // ì„œë²„ì™€ í´ë¼ì´ì–¸íŠ¸ì˜ ì†Œì¼“ í•¸ë“¤ êµ¬ì¡°ì²´
+    WSADATA      wsaData;         // ìœˆì† ì •ë³´ë¥¼ ë‹´ì„ êµ¬ì¡°ì²´ 
+    SOCKADDR_IN sin, cli_addr;      // ì„œë²„ì™€ í´ë¼ì´ì–¸íŠ¸ì˜ ì†Œì¼“ ì£¼ì†Œì •ë³´ë¥¼ ë‹´ì„ êµ¬ì¡°ì²´
 
 
-    // À©¼Ó ¹öÀü 2.2¸¦ »ç¿ëÇÒ¼öÀÖ´ÂÁö ¿î¿µÃ¼Á¦¿¡ È®ÀÎ, 
-    // »ç¿ë °¡´ÉÇÏ¸é wsaData¿¡ °ªÀ» Ã¤¿öÁØ´Ù.
+    // ìœˆì† ë²„ì „ 2.2ë¥¼ ì‚¬ìš©í• ìˆ˜ìžˆëŠ”ì§€ ìš´ì˜ì²´ì œì— í™•ì¸, 
+    // ì‚¬ìš© ê°€ëŠ¥í•˜ë©´ wsaDataì— ê°’ì„ ì±„ì›Œì¤€ë‹¤.
     if (WSAStartup(WINSOCK_VERSION, &wsaData) != 0) {
 
-        printf("WSAStartup ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("WSAStartup ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
     }
 
-    // ¼ÒÄÏ»ý¼º , socket(»ç¿ëÇÒ ÁÖ¼ÒÃ¼°è, ¼ÒÄÏÅ¸ÀÔ, µ¥ÀÌÅÍÀü¼Û¹æ½Ä);
-    // AF_INET : IPv4 ÁÖ¼Ò »ç¿ë
-    // SOCK_STREAM : ¿¬°áÁöÇâÇü (¼ÒÄÏÀÌ ¿¬°áµÈ Å¬¶óÀÌ¾ðÆ®¿Í¸¸ µ¥ÀÌÅÍ ¼Û¼ö½Å °¡´É) 
+    // ì†Œì¼“ìƒì„± , socket(ì‚¬ìš©í•  ì£¼ì†Œì²´ê³„, ì†Œì¼“íƒ€ìž…, ë°ì´í„°ì „ì†¡ë°©ì‹);
+    // AF_INET : IPv4 ì£¼ì†Œ ì‚¬ìš©
+    // SOCK_STREAM : ì—°ê²°ì§€í–¥í˜• (ì†Œì¼“ì´ ì—°ê²°ëœ í´ë¼ì´ì–¸íŠ¸ì™€ë§Œ ë°ì´í„° ì†¡ìˆ˜ì‹  ê°€ëŠ¥) 
     s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
-    // socketÇÔ¼ö·Î ¼ÒÄÏ»ý¼º ½ÇÆÐ½Ã INVALID_SOCKET ¹ÝÈ¯
+    // socketí•¨ìˆ˜ë¡œ ì†Œì¼“ìƒì„± ì‹¤íŒ¨ì‹œ INVALID_SOCKET ë°˜í™˜
     if (s == INVALID_SOCKET) {
-        printf("¼ÒÄÏ »ý¼º ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("ì†Œì¼“ ìƒì„± ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         WSACleanup();
     }
 
-    // ¼ÒÄÏÀÌ »ý¼ºµÇ¸é ¼ÒÄÏÁÖ¼ÒÁ¤º¸¸¦ Ã¤¿öÁØ´Ù.
-    sin.sin_family = AF_INET;                  // »ç¿ëÇÏ´Â ÁÖ¼ÒÃ¼°è ¸í½Ã
-    sin.sin_port = htons(9190);                  // ¼­¹ö Æ÷Æ®¹øÈ£ ¼³Á¤
+    // ì†Œì¼“ì´ ìƒì„±ë˜ë©´ ì†Œì¼“ì£¼ì†Œì •ë³´ë¥¼ ì±„ì›Œì¤€ë‹¤.
+    sin.sin_family = AF_INET;                  // ì‚¬ìš©í•˜ëŠ” ì£¼ì†Œì²´ê³„ ëª…ì‹œ
+    sin.sin_port = htons(9190);                  // ì„œë²„ í¬íŠ¸ë²ˆí˜¸ ì„¤ì •
     sin.sin_addr.s_addr = htonl(ADDR_ANY);
-    //   sin.sin_addr.S_un.S_addr = htonl(ADDR_ANY);      // ¸ðµç Å¬¶óÀÌ¾ðÆ®ÀÇ Á¢¼Ó Çã¿ë
+    //   sin.sin_addr.S_un.S_addr = htonl(ADDR_ANY);      // ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì˜ ì ‘ì† í—ˆìš©
 
-       // ¼ÒÄÏÇÚµé s¿¡ ¼³Á¤ÇÑ ¼ÒÄÏÁÖ¼ÒÁ¤º¸(sin) ´ã±â , ½ÇÆÐ ½Ã SOCKET_ERROR ¹ÝÈ¯
+       // ì†Œì¼“í•¸ë“¤ sì— ì„¤ì •í•œ ì†Œì¼“ì£¼ì†Œì •ë³´(sin) ë‹´ê¸° , ì‹¤íŒ¨ ì‹œ SOCKET_ERROR ë°˜í™˜
     if (bind(s, (SOCKADDR*)&sin, sizeof(sin)) == SOCKET_ERROR) {
-        printf("bind ½ÇÆÐ , ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("bind ì‹¤íŒ¨ , ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         closesocket(s); WSACleanup();
     }
 
-    // Å¬¶óÀÌ¾ðÆ® Á¢¼Ó´ë±â , listen(¼ÒÄÏÇÚµé, Á¢¼Ó ´ë±âÀÚ¼ö)
+    // í´ë¼ì´ì–¸íŠ¸ ì ‘ì†ëŒ€ê¸° , listen(ì†Œì¼“í•¸ë“¤, ì ‘ì† ëŒ€ê¸°ìžìˆ˜)
     if (listen(s, SOMAXCONN) == 1) {
-        printf("listen ¸ðµå ¼³Á¤ ½ÇÆÐ , ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("listen ëª¨ë“œ ì„¤ì • ì‹¤íŒ¨ , ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         closesocket(s); WSACleanup();
     }
-    printf("¼­¹ö¸¦ ½ÃÀÛÇÕ´Ï´Ù\n");
-    printf("Å¬¶óÀÌ¾ðÆ®·ÎºÎÅÍÀÇ Á¢¼ÓÀ» ±â´Ù¸®°í ÀÖ½À´Ï´Ù ...\n");
+    printf("ì„œë²„ë¥¼ ì‹œìž‘í•©ë‹ˆë‹¤\n");
+    printf("í´ë¼ì´ì–¸íŠ¸ë¡œë¶€í„°ì˜ ì ‘ì†ì„ ê¸°ë‹¤ë¦¬ê³  ìžˆìŠµë‹ˆë‹¤ ...\n");
 
-    int cli_size = sizeof(cli_addr);   // acceptÇÔ¼ö¿¡ cli_addrÀÇ Å©±â¸¦ ÁÖ¼Ò·Î ³Ñ°ÜÁà¾ßÇÏ¹Ç·Î º¯¼ö¸¦ ¸¸µç´Ù.
+    int cli_size = sizeof(cli_addr);   // acceptí•¨ìˆ˜ì— cli_addrì˜ í¬ê¸°ë¥¼ ì£¼ì†Œë¡œ ë„˜ê²¨ì¤˜ì•¼í•˜ë¯€ë¡œ ë³€ìˆ˜ë¥¼ ë§Œë“ ë‹¤.
 
-    // Å¬¶óÀÌ¾ðÆ®¿Í ¿¬°á, Å¬¶óÀÌ¾ðÆ®ÀÇ Á¢¼ÓÀÌ ÀÖÀ»¶§±îÁö ¹«ÇÑ´ë±â.
-    // Å¬¶óÀÌ¾ðÆ®¿Í ¿¬°á ÈÄ Å¬¶óÀÌ¾ðÆ®¼ÒÄÏÇÚµé(cs)¿¡ Å¬¶óÀÌ¾ðÆ®ÀÇ Á¤º¸¸¦ °¡Áö°í ÀÖ´Â´Ù.
+    // í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°, í´ë¼ì´ì–¸íŠ¸ì˜ ì ‘ì†ì´ ìžˆì„ë•Œê¹Œì§€ ë¬´í•œëŒ€ê¸°.
+    // í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²° í›„ í´ë¼ì´ì–¸íŠ¸ì†Œì¼“í•¸ë“¤(cs)ì— í´ë¼ì´ì–¸íŠ¸ì˜ ì •ë³´ë¥¼ ê°€ì§€ê³  ìžˆëŠ”ë‹¤.
     cs = accept(s, (SOCKADDR*)&cli_addr, &cli_size);
     if (cs == INVALID_SOCKET) {
-        printf("Á¢¼Ó ½ÂÀÎ ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("ì ‘ì† ìŠ¹ì¸ ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         closesocket(s); WSACleanup();
     }
 
-    printf("Å¬¶óÀÌ¾ðÆ®¿Í ¿¬°áµÇ¾ú½À´Ï´Ù\n");
+    printf("í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤\n");
 
-    char message[BUFSIZE];   // µ¥ÀÌÅÍ¸¦ ¹Þ¾Æ¿Ã º¯¼ö »ý¼º
+    char message[BUFSIZE];   // ë°ì´í„°ë¥¼ ë°›ì•„ì˜¬ ë³€ìˆ˜ ìƒì„±
 
-    // µ¥ÀÌÅÍ ¼ö½Å , recv(Å¬¶óÀÌ¾ðÆ®¼ÒÄÏÇÚµé,µ¥ÀÌÅÍ ¹Þ¾Æ¿Ã º¯¼ö,¼ö½ÅÇÒ µ¥ÀÌÅÍ ÃÖ´ë ±æÀÌ, µ¥ÀÌÅÍ ¼ö½Å ±âÈ£);
+    // ë°ì´í„° ìˆ˜ì‹  , recv(í´ë¼ì´ì–¸íŠ¸ì†Œì¼“í•¸ë“¤,ë°ì´í„° ë°›ì•„ì˜¬ ë³€ìˆ˜,ìˆ˜ì‹ í•  ë°ì´í„° ìµœëŒ€ ê¸¸ì´, ë°ì´í„° ìˆ˜ì‹  ê¸°í˜¸);
     recv(cs, message, 1024, 0);
-    printf("[Å¬¶óÀÌ¾ðÆ®°¡ º¸³½ µ¥ÀÌÅÍ]\n%s\n", message);
+    printf("[í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚¸ ë°ì´í„°]\n%s\n", message);
 
 
-    // µ¥ÀÌÅÍ ¼Û½Å , send(Å¬¶óÀÌ¾ðÆ®¼ÒÄÏÇÚµé,º¸³¾ µ¥ÀÌÅÍ º¯¼ö,º¸³¾ µ¥ÀÌÅÍ ±æÀÌ, µ¥ÀÌÅÍ ¼ö½Å ±âÈ£);
-    printf("¼­¹ö¿¡ º¸³¾ µ¥ÀÌÅÍ ÀÔ·Â : ");
+    // ë°ì´í„° ì†¡ì‹  , send(í´ë¼ì´ì–¸íŠ¸ì†Œì¼“í•¸ë“¤,ë³´ë‚¼ ë°ì´í„° ë³€ìˆ˜,ë³´ë‚¼ ë°ì´í„° ê¸¸ì´, ë°ì´í„° ìˆ˜ì‹  ê¸°í˜¸);
+    printf("ì„œë²„ì— ë³´ë‚¼ ë°ì´í„° ìž…ë ¥ : ");
 
 
-    char send_y[BUFSIZE];   //ÀÏ´Ü BUFSIZE·Î ÇØº½, char´Â 2¹ÙÀÌÆ®ÀÎµ¥ ÁøÂ¥ 2¸¸¹ÞÀ¸¸é ¿À·ù³ª¼­ ³Ë³ËÇÏ°Ô ÁÜ žÍ±î
+    char send_y[BUFSIZE];   //ì¼ë‹¨ BUFSIZEë¡œ í•´ë´„, charëŠ” 2ë°”ì´íŠ¸ì¸ë° ì§„ì§œ 2ë§Œë°›ìœ¼ë©´ ì˜¤ë¥˜ë‚˜ì„œ ë„‰ë„‰í•˜ê²Œ ì¤Œ Âžå‘Š
     char send_x[BUFSIZE];
     Mk_MazeMap();
     /*
@@ -421,7 +421,7 @@ void server() {
     while (1) {
         //send(s, user_x, strlen(user_x), 0);
         //send(s, user_y, strlen(user_y), 0);
-        recv(s, send_y, 1024, 0); //char´Â 2¹ÙÀÌÆ®ÀÎµ¥ ÁøÂ¥ 2¸¸¹ÞÀ¸¸é ¿À·ù³ª¼­ ³Ë³ËÇÏ°Ô ÁÜ žÍ±î
+        recv(s, send_y, 1024, 0); //charëŠ” 2ë°”ì´íŠ¸ì¸ë° ì§„ì§œ 2ë§Œë°›ìœ¼ë©´ ì˜¤ë¥˜ë‚˜ì„œ ë„‰ë„‰í•˜ê²Œ ì¤Œ Âžå‘Š
         recv(s, send_x, 1024, 0);
         gotoxy(user_x, user_y);
         printf("  ");
@@ -430,15 +430,15 @@ void server() {
     //    move();
     }*/
     if (closesocket(cs) != 0 || closesocket(s) != 0) {
-        printf("¼ÒÄÏ Á¦°Å ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("ì†Œì¼“ ì œê±° ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         WSACleanup();
     }
 
     if (WSACleanup() != 0) {
-        printf("WSACleanup ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("WSACleanup ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
     }
 
-    printf("¼­¹ö¸¦ Á¾·áÇÕ´Ï´Ù\n");
+    printf("ì„œë²„ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤\n");
     closesocket(cs);
     closesocket(s);
     WSACleanup();
@@ -460,13 +460,13 @@ void client() {
 
 
     if (WSAStartup(WINSOCK_VERSION, &wsaData) != 0) {
-        printf("WSAStartup ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("WSAStartup ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
     }
 
     s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
     if (s == INVALID_SOCKET) {
-        printf("¼ÒÄÏ »ý¼º ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("ì†Œì¼“ ìƒì„± ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         WSACleanup();
     }
 
@@ -477,17 +477,17 @@ void client() {
 
 
     if (connect(s, (SOCKADDR*)&sin, sizeof(sin)) != 0) {
-        printf("Á¢¼Ó ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("ì ‘ì† ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
         closesocket(s); WSACleanup();
     }
-    printf("¼­¹ö¿Í ¿¬°áµÇ¾ú½À´Ï´Ù.\n ¼­¹ö¿¡ Àü¼ÛÇÒ µ¥ÀÌÅÍ ÀÔ·Â : ");
+    printf("ì„œë²„ì™€ ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.\n ì„œë²„ì— ì „ì†¡í•  ë°ì´í„° ìž…ë ¥ : ");
 
 
     gets(message);
 
     send(s, message, strlen(message) + 1, 0);
 
-    printf("µ¥ÀÌÅÍ Àü¼Û ¼º°ø!\n");
+    printf("ë°ì´í„° ì „ì†¡ ì„±ê³µ!\n");
     Mk_MazeMap();
     /*
     recv(s, mazeMap, sizeof(mazeMap), 0);
@@ -497,12 +497,12 @@ void client() {
     clientmove(s);
     */
     if (closesocket(s) != 0) {
-        printf("¼ÒÄÏ Á¦°Å ½ÇÆÐ, ¿¡·¯ ÄÚµå : %d\n", WSAGetLastError());
+        printf("ì†Œì¼“ ì œê±° ì‹¤íŒ¨, ì—ëŸ¬ ì½”ë“œ : %d\n", WSAGetLastError());
         WSACleanup();
     }
 
     if (WSACleanup() != 0) {
-        printf("WSACleanup ½ÇÆÐ, ¿¡·¯ÄÚµå : %d\n", WSAGetLastError());
+        printf("WSACleanup ì‹¤íŒ¨, ì—ëŸ¬ì½”ë“œ : %d\n", WSAGetLastError());
     }
     closesocket(s);
     WSACleanup();
@@ -511,22 +511,22 @@ void client() {
 
 
 void endMenu() {
-    int x = 4, y = 3;     // ±âÁØ ÁÂÇ¥
+    int x = 4, y = 3;     // ê¸°ì¤€ ì¢Œí‘œ
     if (clientcount == 0 && servercount == -1) {
-        for (i = 0; i < 5; i++) selection(i + 12, 30, server_end_menu[i]);     // Á¦ÀÛÁø ¼³¸íÃ¢
-        selection(37, 25, "¢º ³ª°¡±â");
+        for (i = 0; i < 5; i++) selection(i + 12, 30, server_end_menu[i]);     // ì œìž‘ì§„ ì„¤ëª…ì°½
+        selection(37, 25, "â–¶ ë‚˜ê°€ê¸°");
     }
     else if (clientcount == -1 && servercount == 0){
-        for (i = 0; i < 5; i++) selection(i + 12, 30, client_end_menu[i]);     // Á¦ÀÛÁø ¼³¸íÃ¢
-        selection(37, 25, "¢º ³ª°¡±â");
+        for (i = 0; i < 5; i++) selection(i + 12, 30, client_end_menu[i]);     // ì œìž‘ì§„ ì„¤ëª…ì°½
+        selection(37, 25, "â–¶ ë‚˜ê°€ê¸°");
     }
     else if (clientcount == 1 && servercount == 2) {
-        for (i = 0; i < 5; i++) selection(i + 12, 30, server_end_menu[i]);     // Á¦ÀÛÁø ¼³¸íÃ¢
-        selection(37, 25, "¢º ³ª°¡±â");
+        for (i = 0; i < 5; i++) selection(i + 12, 30, server_end_menu[i]);     // ì œìž‘ì§„ ì„¤ëª…ì°½
+        selection(37, 25, "â–¶ ë‚˜ê°€ê¸°");
     }
     else if (clientcount == 2 && servercount == 1) {
-        for (i = 0; i < 5; i++) selection(i + 12, 30, client_end_menu[i]);     // Á¦ÀÛÁø ¼³¸íÃ¢
-        selection(37, 25, "¢º ³ª°¡±â");
+        for (i = 0; i < 5; i++) selection(i + 12, 30, client_end_menu[i]);     // ì œìž‘ì§„ ì„¤ëª…ì°½
+        selection(37, 25, "â–¶ ë‚˜ê°€ê¸°");
     }
 
 
